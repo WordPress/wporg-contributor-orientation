@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wporg/contributor-orientation",
+	"version": "0.1.0",
+	"title": "Contritbutor Orientation Block",
+	"category": "widgets",
+	"icon": "community",
+	"description": "Orient new contributors.",
+	"textdomain": "wporg",
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css"
+}
