@@ -8,6 +8,24 @@
 	"icon": "community",
 	"description": "Orient new contributors.",
 	"textdomain": "wporg",
+	"supports": {
+		"align": true,
+		"html": false,
+		"spacing": {
+			"margin": [ "top", "bottom" ],
+			"padding": true
+		},
+		"color": {
+			"background": true,
+			"text": true,
+			"link": true
+		},
+		"typography": {
+			"fontSize": true
+		},
+		"multiple": false
+	},
 	"editorScript": "file:./index.js",
-	"style": "file:./style.css"
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css"
 }

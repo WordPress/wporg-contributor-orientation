@@ -1,12 +1,81 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.wporg-contributor-orientation {
+	--wporg-contrib--spacing--block-gap: 1em;
+	--wporg-contrib--border--color: var(--wp--preset--color--secondary);
+	--wporg-contrib--border--style: solid;
+	--wporg-contrib--border--width: 1px;
 
-.wp-block-wporg-contributor-orientation {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	* {
+		box-sizing: border-box;
+	}
+}
+
+.wporg-contributor-orientation--steps {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding: var(--wporg-contrib--spacing--block-gap);
+		border-color: var(--wporg-contrib--border--color);
+		border-style: var(--wporg-contrib--border--style);
+		border-width: var(--wporg-contrib--border--width);
+		width: 100%;
+
+		+ li {
+			border-left: none;
+		}
+
+		strong,
+		&.is-current {
+			font-weight: 600;
+		}
+	}
+}
+
+.wporg-contributor-orientation--page {
+	border-color: var(--wporg-contrib--border--color);
+	border-style: var(--wporg-contrib--border--style);
+	border-width: var(--wporg-contrib--border--width);
+	border-top-width: 0;
+	padding:
+		var(--wporg-contrib--spacing--block-gap)
+		var(--wporg-contrib--spacing--block-gap)
+		calc(var(--wporg-contrib--spacing--block-gap) * 2);
+
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+}
+
+.wporg-contributor-orientation--actions {
+	display: flex;
+	gap: var(--wporg-contrib--spacing--block-gap);
+}
+
+.wporg-contributor-orientation--title {
+	margin: 0;
+	font-size: 1.4em;
+}
+
+.wporg-contributor-orientation--team {
+	margin-top: var(--wporg-contrib--spacing--block-gap);
+}
+
+.wporg-contributor-orientation--team-name {
+	margin: 0;
+	font-size: 1.2em;
+
+	a {
+		display: inline-flex;
+		gap: calc(var(--wporg-contrib--spacing--block-gap) / 2);
+		align-items: center;
+	}
+
+	img {
+		width: 1em;
+		height: 1em;
+	}
 }
