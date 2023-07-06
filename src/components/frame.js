@@ -17,6 +17,12 @@ const steps = WPorgContribBlock.pages.reduce( ( acc, current ) => {
 	return acc;
 }, [] );
 
+/**
+ * Find the intersection of multiple arrays.
+ *
+ * @param {Array[]} data A 2D array, list of arrays to match.
+ * @return {Array} A single array of the values shared across the input.
+ */
 function intersect( data = [] ) {
 	return data.reduce( ( a, b ) => a.filter( ( item ) => b.includes( item ) ), allTeams );
 }
