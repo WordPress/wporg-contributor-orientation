@@ -72,7 +72,7 @@ export default function Frame() {
 		<div className="wporg-contributor-orientation">
 			<ul className="wporg-contributor-orientation--steps">
 				{ steps.map( ( step, key ) => (
-					<li key={ key } className={ key === i ? 'is-current' : '' }>
+					<li key={ key } aria-current={ key === i ? 'step' : null }>
 						<strong style={ { display: 'block' } }>{ `Step ${ key + 1 }: ` }</strong>
 						{ step }
 					</li>

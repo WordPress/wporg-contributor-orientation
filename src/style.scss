@@ -27,7 +27,7 @@
 		}
 
 		strong,
-		&.is-current {
+		&[aria-current="step"] {
 			font-weight: 600;
 		}
 	}
