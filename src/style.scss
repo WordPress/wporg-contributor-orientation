@@ -85,7 +85,7 @@
 
 // Results page.
 .wporg-contributor-orientation--team {
-	margin-block-start: var(--wporg-contrib--spacing--block-gap);
+	margin-block-start: calc(var(--wporg-contrib--spacing--block-gap) * 2);
 }
 
 .wporg-contributor-orientation--team-name {
