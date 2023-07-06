@@ -4,20 +4,27 @@ A block to help contributors learn where they'll fit best.
 
 ## Getting started
 
-This uses wp-env to set up a dev enviroment. It also uses wp-scripts to build the block assets.
+**Prerequisites**
+
+- Docker (see [wp-env prerequesites](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/#prerequisites))
+- [Composer](https://getcomposer.org/)
+- [Node](https://nodejs.org/en)
+- [nvm](https://github.com/nvm-sh/nvm) (optional)
+
+This uses wp-env to set up a dev enviroment, and wp-scripts to build the block assets.
 
 1. Install the dependencies
-    ```
-    nvm use
+    ```bash
+    nvm use # if you use nvm.
     npm install
     composer install
     ```
 2. Build the project
-    ```
+    ```bash
     npm run build
     ```
 3. Start the local enviroment
-    ```
+    ```bash
     npm run wp-env start
     ```
 4. Log in at [localhost:8888/wp-admin/](http://localhost:8888/wp-admin/), check that the "Contritbutor Orientation Block" plugin is active
