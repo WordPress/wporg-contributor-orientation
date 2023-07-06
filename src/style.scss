@@ -51,16 +51,13 @@
 
 	.components-base-control {
 		margin-top: var(--wporg-contrib--spacing--block-gap);
+		font-size: inherit;
 	}
 
 	.components-base-control__field {
 		display: inline-flex;
 		align-items: center;
 		margin-bottom: 0;
-	}
-
-	.components-checkbox-control__label {
-		font-size: 1rem;
 	}
 }
 
