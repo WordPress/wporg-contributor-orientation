@@ -2,8 +2,14 @@
 /**
  * WordPress dependencies
  */
+import { CheckboxControl } from '@wordpress/components';
 import { useInstanceId } from '@wordpress/compose';
 import { useState } from '@wordpress/element';
+
+/**
+ * Internal dependencies
+ */
+import Buttons from './buttons';
 
 const allTeams = Object.keys( WPorgContribBlock.teams );
 
@@ -14,8 +20,8 @@ export default function QuestionStep( {
 	teamList,
 	value,
 	onChange,
-	nextPage,
-	prevPage,
+	onNext,
+	onPrevious,
 } ) {
 	const id = useInstanceId( QuestionStep );
 	const [ selected, setSelected ] = useState( value );
@@ -35,46 +41,33 @@ export default function QuestionStep( {
 					return null;
 				}
 				return (
-					<p key={ `${ prefix }-${ i }` }>
-						<input
-							id={ `${ prefix }-${ i }` }
-							type="checkbox"
-							checked={ selected.includes( `q${ step }:` + teams.join( ',' ) ) }
-							onChange={ ( event ) => {
-								const newValue = `q${ step }:` + teams.join( ',' );
-								if ( event.target.checked && ! selected.includes( newValue ) ) {
-									setSelected( [ ...selected, newValue ] );
-								}
-								if ( ! event.target.checked && selected.includes( newValue ) ) {
-									setSelected( selected.filter( ( item ) => item !== newValue ) );
-								}
-							} }
-						/>
-						<label htmlFor={ `${ prefix }-${ i }` }>{ label }</label>
-						<span style={ { display: 'none' } }>{ teams.join( ', ' ) }</span>
-					</p>
+					<CheckboxControl
+						key={ `${ prefix }-${ i }` }
+						label={ label }
+						checked={ selected.includes( `q${ step }:` + teams.join( ',' ) ) }
+						onChange={ ( isChecked ) => {
+							const newValue = `q${ step }:` + teams.join( ',' );
+							if ( isChecked && ! selected.includes( newValue ) ) {
+								setSelected( [ ...selected, newValue ] );
+							}
+							if ( ! isChecked && selected.includes( newValue ) ) {
+								setSelected( selected.filter( ( item ) => item !== newValue ) );
+							}
+						} }
+					/>
 				);
 			} ) }
-			<div className="wporg-contributor-orientation--actions">
-				{ step > 1 && (
-					<button
-						onClick={ () => {
-							onChange( selected );
-							prevPage();
-						} }
-					>
-						Prev
-					</button>
-				) }
-				<button
-					onClick={ () => {
-						onChange( selected );
-						nextPage();
-					} }
-				>
-					Next
-				</button>
-			</div>
+			<Buttons
+				step={ step }
+				onPrevious={ () => {
+					onChange( selected );
+					onPrevious();
+				} }
+				onNext={ () => {
+					onChange( selected );
+					onNext();
+				} }
+			/>
 		</fieldset>
 	);
 }

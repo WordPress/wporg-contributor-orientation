@@ -8,8 +8,11 @@
 
 namespace WordPressdotorg\Blocks\ContributorOrientation;
 
+use WP_Block_Type_Registry;
+
 // Actions & filters.
 add_action( 'init', __NAMESPACE__ . '\block_init' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\inject_style_dep', 20 );
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -37,6 +40,25 @@ function block_init() {
 	}
 }
 
+/**
+ * Add the `wp-components` dependency to the style.
+ */
+function inject_style_dep() {
+	global $wp_styles;
+	$block = WP_Block_Type_Registry::get_instance()->get_registered( 'wporg/contributor-orientation' );
+
+	foreach ( $block->style_handles as $handle ) {
+		$style = $wp_styles->query( $handle, 'registered' );
+
+		if ( ! $style ) {
+			return false;
+		}
+
+		if ( ! in_array( 'wp-components', $style->deps ) ) {
+			$style->deps[] = 'wp-components';
+		}
+	}
+}
 /**
  * Render the block content.
  *

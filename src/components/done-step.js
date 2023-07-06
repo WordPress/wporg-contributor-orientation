@@ -1,6 +1,10 @@
 /* global WPorgContribBlock */
+/**
+ * Internal dependencies
+ */
+import Buttons from './buttons';
 
-export default function DoneStep( { headline, value } ) {
+export default function DoneStep( { headline, value, onPrevious } ) {
 	return (
 		<>
 			<h2 className="wporg-contributor-orientation--title">{ headline }</h2>
@@ -26,6 +30,7 @@ export default function DoneStep( { headline, value } ) {
 					</div>
 				);
 			} ) }
+			<Buttons step={ -1 } onPrevious={ onPrevious } />
 		</>
 	);
 }

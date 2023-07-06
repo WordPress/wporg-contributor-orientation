@@ -66,11 +66,11 @@ export default function Frame() {
 						onChange={ ( value ) => {
 							setSelected( value );
 						} }
-						prevPage={ prevPage }
-						nextPage={ nextPage }
+						onPrevious={ onPrevious }
+						onNext={ onNext }
 					/>
 				) : (
-					<DoneStep { ...page } value={ teams } />
+					<DoneStep { ...page } value={ teams } onPrevious={ onPrevious } />
 				) }
 			</div>
 		</div>

@@ -48,11 +48,20 @@
 		padding: 0;
 		border: none;
 	}
-}
 
-.wporg-contributor-orientation--actions {
-	display: flex;
-	gap: var(--wporg-contrib--spacing--block-gap);
+	.components-base-control {
+		margin-top: var(--wporg-contrib--spacing--block-gap);
+	}
+
+	.components-base-control__field {
+		display: inline-flex;
+		align-items: center;
+		margin-bottom: 0;
+	}
+
+	.components-checkbox-control__label {
+		font-size: 1rem;
+	}
 }
 
 .wporg-contributor-orientation--title {
@@ -60,6 +69,13 @@
 	font-size: 1.4em;
 }
 
+.wporg-contributor-orientation--actions {
+	display: flex;
+	gap: var(--wporg-contrib--spacing--block-gap);
+	margin-top: var(--wporg-contrib--spacing--block-gap);
+}
+
+// Results page.
 .wporg-contributor-orientation--team {
 	margin-top: var(--wporg-contrib--spacing--block-gap);
 }
