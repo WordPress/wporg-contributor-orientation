@@ -3,7 +3,7 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { Button, ButtonGroup } from '@wordpress/components';
+import { Button } from '@wordpress/components';
 
 const allPages = WPorgContribBlock.pages;
 
@@ -13,7 +13,7 @@ export default function Buttons( { step, onNext, onPrevious } ) {
 		step = allPages.length;
 	}
 	return (
-		<ButtonGroup className="wporg-contributor-orientation--actions">
+		<div className="wporg-contributor-orientation--actions">
 			{ step > 1 && (
 				<Button onClick={ onPrevious } variant="secondary">
 					{ __( 'Previous', 'wporg' ) }
@@ -24,6 +24,6 @@ export default function Buttons( { step, onNext, onPrevious } ) {
 					{ __( 'Next', 'wporg' ) }
 				</Button>
 			) }
-		</ButtonGroup>
+		</div>
 	);
 }
