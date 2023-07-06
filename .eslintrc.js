@@ -16,7 +16,8 @@ module.exports = {
 	},
 
 	globals: {
-		wp: true, // eslint-disable-line id-length
+		wp: 'readonly', // eslint-disable-line id-length
+		WPorgContribBlock: 'readonly',
 	},
 
 	ignorePatterns: [ '*.min.js' ],

@@ -1,4 +1,3 @@
-/* global WPorgContribBlock */
 /**
  * Internal dependencies
  */
