@@ -3,6 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { CheckboxControl, Notice } from '@wordpress/components';
+import { decodeEntities } from '@wordpress/html-entities';
 import { useInstanceId } from '@wordpress/compose';
 import { useState } from '@wordpress/element';
 
@@ -44,7 +45,7 @@ export default function QuestionStep( {
 				return (
 					<CheckboxControl
 						key={ `${ prefix }-${ i }` }
-						label={ label }
+						label={ decodeEntities( label ) }
 						checked={ selected.includes( `q${ step }:` + teams.join( ',' ) ) }
 						onChange={ ( isChecked ) => {
 							const newValue = `q${ step }:` + teams.join( ',' );
