@@ -1,7 +1,8 @@
 /**
  * WordPress dependencies
  */
-import { CheckboxControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
+import { CheckboxControl, Notice } from '@wordpress/components';
 import { useInstanceId } from '@wordpress/compose';
 import { useState } from '@wordpress/element';
 
@@ -24,6 +25,7 @@ export default function QuestionStep( {
 } ) {
 	const id = useInstanceId( QuestionStep );
 	const [ selected, setSelected ] = useState( value );
+	const [ notice, setNotice ] = useState( '' );
 	const prefix = `q-${ step }-${ id }`;
 	if ( ! teamList ) {
 		teamList = allTeams;
@@ -56,15 +58,28 @@ export default function QuestionStep( {
 					/>
 				);
 			} ) }
+			{ !! notice && (
+				<Notice status="warning" onRemove={ () => setNotice( '' ) }>
+					{ notice }
+				</Notice>
+			) }
 			<Buttons
 				step={ step }
 				onPrevious={ () => {
+					setNotice( '' );
 					onChange( selected );
 					onPrevious();
 				} }
 				onNext={ () => {
-					onChange( selected );
-					onNext();
+					setNotice( '' );
+					// Prevent moving forward if nothing selected on this step.
+					const responses = selected.filter( ( item ) => item.startsWith( `q${ step }:` ) );
+					if ( responses.length ) {
+						onChange( selected );
+						onNext();
+					} else {
+						setNotice( __( 'You must select at least one option', 'wporg' ) );
+					}
 				} }
 			/>
 		</fieldset>
