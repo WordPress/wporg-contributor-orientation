@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies
  */
+import { __, sprintf } from '@wordpress/i18n';
 import { useEffect, useRef, useState } from '@wordpress/element';
 
 /**
@@ -72,7 +73,13 @@ export default function Frame() {
 			<ul className="wporg-contributor-orientation--steps">
 				{ steps.map( ( step, key ) => (
 					<li key={ key } aria-current={ key === i ? 'step' : null }>
-						<strong style={ { display: 'block' } }>{ `Step ${ key + 1 }: ` }</strong>
+						<strong style={ { display: 'block' } }>
+							{ sprintf(
+								/* translators: %s step number */
+								__( 'Step %s:', 'wporg' ),
+								key + 1
+							) }
+						</strong>
 						{ step }
 					</li>
 				) ) }
