@@ -73,7 +73,7 @@ export default function Frame() {
 			<ul className="wporg-contributor-orientation--steps">
 				{ steps.map( ( step, key ) => (
 					<li key={ key } aria-current={ key === i ? 'step' : null }>
-						<strong style={ { display: 'block' } }>
+						<strong>
 							{ sprintf(
 								/* translators: %s step number */
 								__( 'Step %s:', 'wporg' ),

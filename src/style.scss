@@ -23,12 +23,30 @@
 		width: 100%;
 
 		+ li {
-			border-left: none;
+			border-left-width: 0;
+		}
+
+		strong {
+			display: block;
 		}
 
 		strong,
 		&[aria-current="step"] {
 			font-weight: 600;
+		}
+	}
+
+	@media (max-width: 780px) {
+		flex-direction: column;
+
+		li strong {
+			display: inline-block;
+			margin-inline-end: 0.5em;
+		}
+
+		li + li {
+			border-top-width: 0;
+			border-left-width: var(--wporg-contrib--border--width);
 		}
 	}
 }
