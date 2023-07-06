@@ -2,7 +2,7 @@
 /**
  * WordPress dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useRef, useState } from '@wordpress/element';
 
 /**
  * Internal dependencies
@@ -31,8 +31,23 @@ export default function Frame() {
 	const [ i, setPage ] = useState( 0 );
 	const [ selected, setSelected ] = useState( [] );
 	const [ teams, setTeams ] = useState( allTeams );
-	const prevPage = () => setPage( i - 1 );
-	const nextPage = () => setPage( i + 1 );
+	const pageRef = useRef( null );
+	const onPrevious = () => {
+		if ( pageRef.current ) {
+			pageRef.current.tabIndex = -1;
+			pageRef.current.focus();
+		}
+		setPage( i - 1 );
+	};
+	const onNext = () => {
+		if ( pageRef.current ) {
+			pageRef.current.tabIndex = -1;
+			pageRef.current.focus();
+		}
+		setPage( i + 1 );
+	};
+
+	// When the selected value is updated, use that step-by-step to get a list of teams.
 	useEffect( () => {
 		const teamList = [];
 		// Update the team list up to the current step.
@@ -63,7 +78,7 @@ export default function Frame() {
 					</li>
 				) ) }
 			</ul>
-			<div className="wporg-contributor-orientation--page">
+			<div className="wporg-contributor-orientation--page" ref={ pageRef }>
 				{ ! isLastPage ? (
 					<QuestionStep
 						{ ...page }
