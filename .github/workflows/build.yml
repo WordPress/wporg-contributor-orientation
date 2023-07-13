@@ -41,7 +41,9 @@ jobs:
 
       - name: Add build files, remove source files.
         run: |
+          rm -rf node_modules vendor
           git rm .editorconfig .eslintrc.js .gitignore .nvmrc .prettierrc.js .stylelintrc .wp-env.json composer.lock package-lock.json phpcs.xml.dist
+          git rm -r .github
           git add build --force
 
       - name: Commit and push
