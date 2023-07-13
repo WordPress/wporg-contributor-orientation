@@ -27,7 +27,7 @@ jobs:
 
       - name: Install all dependencies
         run: |
-          composer install --no-dev
+          composer install
           npm install
 
       - name: Lint
