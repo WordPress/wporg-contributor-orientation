@@ -41,7 +41,6 @@ jobs:
 
       - name: Add build files, remove source files.
         run: |
-          git rm src
           git rm .* composer.lock package-lock.json phpcs.xml.dist
           git add build --force
 
