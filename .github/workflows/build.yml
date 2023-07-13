@@ -3,7 +3,6 @@ name: Build and push to build branch.
 on:
   push:
     branches: [trunk]
-  pull_request:
 
 jobs:
   build:
