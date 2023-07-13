@@ -8,6 +8,7 @@
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^5.19.0",
 		"@wordpress/env": "^8.2.0",
+		"@wordpress/prettier-config": "^2.20.0",
 		"@wordpress/scripts": "^26.7.0",
 		"@wordpress/stylelint-config": "^21.19.0"
 	},
