@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# Production-only files
+readme-svn.txt
+
 # Build files
 build/
 
