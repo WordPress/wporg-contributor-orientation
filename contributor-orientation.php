@@ -91,7 +91,7 @@ function get_pages() {
 			'headline'  => esc_html__( 'What do you do with WordPress?', 'wporg' ),
 			'questions' => array(
 				array(
-					'label' => esc_html__( 'Iʼm a developer', 'wporg' ),
+					'label' => esc_html__( 'I&#8217;m a developer', 'wporg' ),
 					'teams' => array(
 						'support',
 						'community',
@@ -107,7 +107,7 @@ function get_pages() {
 					),
 				),
 				array(
-					'label' => esc_html__( 'Iʼm a designer', 'wporg' ),
+					'label' => esc_html__( 'I&#8217;m a designer', 'wporg' ),
 					'teams' => array(
 						'support',
 						'community',
@@ -117,7 +117,7 @@ function get_pages() {
 					),
 				),
 				array(
-					'label' => esc_html__( 'Iʼm a content creator, blogger or marketeer', 'wporg' ),
+					'label' => esc_html__( 'I&#8217;m a content creator, blogger or marketeer', 'wporg' ),
 					'teams' => array(
 						'support',
 						'community',
@@ -129,7 +129,7 @@ function get_pages() {
 					),
 				),
 				array(
-					'label' => esc_html__( 'Iʼm a WordPress user / other', 'wporg' ),
+					'label' => esc_html__( 'I&#8217;m a WordPress user / other', 'wporg' ),
 					'teams' => array(
 						'support',
 						'community',
