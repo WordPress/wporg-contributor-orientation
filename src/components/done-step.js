@@ -12,7 +12,7 @@ export default function DoneStep( { headline, value, onPrevious } ) {
 				return (
 					<div key={ slug } className="wporg-contributor-orientation--team">
 						<h3 className="wporg-contributor-orientation--team-name">
-							<a href={ team.url } target="_blank" rel="noopener noreferrer">
+							<a href={ team.url }>
 								<img alt="" src={ `data:image/svg+xml;utf8,${ team.icon }` } />
 								{ team.name }
 							</a>
