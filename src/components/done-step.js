@@ -18,14 +18,6 @@ export default function DoneStep( { headline, value, onPrevious } ) {
 							</a>
 						</h3>
 						<p className="wporg-contributor-orientation--team-desc">{ team.description }</p>
-						<a
-							className="wporg-contributor-orientation--team-more"
-							href={ team.url }
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							{ team.learnMore }
-						</a>
 					</div>
 				);
 			} ) }
