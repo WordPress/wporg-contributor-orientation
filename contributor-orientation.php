@@ -163,8 +163,8 @@ function get_pages() {
 					'teams' => array(
 						'core',
 						'documentation',
-						'training',			
-						'accessibility',			
+						'training',
+						'accessibility',
 					),
 				),
 				array(
