@@ -488,25 +488,25 @@ function get_teams() {
 		'photos' => array(
 			'name'          => esc_html__( 'Photos', 'wporg' ),
 			'description'   => esc_html__( 'The Photo Directory Team moderates every photo submitted to the WordPress Photo Directory, maintains and improves the directory site itself, and provides resources and documentation to educate, encourage, and facilitate photo contributors.', 'wporg' ),
-			'icon'          => '',
+			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 5V3H3v2h3Zm12 10V4H9L7 6H2v9h16Zm-4-5c0-1.66-1.34-3-3-3s-3 1.34-3 3 1.34 3 3 3 3-1.34 3-3Z" clip-rule="evenodd"/></svg>',
 			'url'           => 'https://make.wordpress.org/cli/handbook/contributing/',
 		),
 		'core-performance' => array(
 			'name'          => esc_html__( 'Core Performance', 'wporg' ),
 			'description'   => esc_html__( 'The Core Performance Team is dedicated to monitoring, enhancing, and promoting performance in WordPress core and its surrounding ecosystem.', 'wporg' ),
-			'icon'          => '',
+			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 94"><path d="M39.21 20.85H27.52a2.5 2.5 0 0 0-2.5 2.5v11.69a2.5 2.5 0 0 0 2.5 2.5h11.69a2.5 2.5 0 0 0 2.5-2.5V23.35a2.5 2.5 0 0 0-2.5-2.5zM41.71 58.96v11.69c0 .66-.26 1.3-.73 1.77s-1.11.73-1.77.73H27.52c-.66 0-1.3-.26-1.77-.73s-.73-1.11-.73-1.77V49.28c0-.4.1-.79.28-1.14.03-.06.07-.12.1-.18.21-.33.49-.61.83-.82L37.9 40.1a2.49 2.49 0 0 1 2.87.19c.26.21.47.46.63.75.16.29.26.61.29.94.02.11.02.22.02.34v16.64ZM68.98 30.23v16.84c0 .33-.06.65-.19.96-.13.3-.31.58-.54.81l-6.88 6.88c-.23.23-.51.42-.81.54-.3.13-.63.19-.96.19H46.45c-.66 0-1.3-.26-1.77-.73s-.73-1.11-.73-1.77V42.26c0-.66.26-1.3.73-1.77s1.11-.73 1.77-.73h13.08s1.11 0 1.11-1.11-1.11-1.11-1.11-1.11H46.45c-.66 0-1.3-.26-1.77-.73s-.73-1.11-.73-1.77V23.35c0-.66.26-1.3.73-1.77s1.11-.73 1.77-.73H59.6c.33 0 .65.06.96.19.3.13.58.31.81.54l6.88 6.88c.23.23.42.51.54.81.13.3.19.63.19.96Z"/></svg>',
 			'url'           => 'https://make.wordpress.org/performance/handbook/get-involved/',
 		),
 		'sustainability' => array(
 			'name'          => esc_html__( 'Sustainability', 'wporg' ),
 			'description'   => esc_html__( 'The Sustainability Team aims to embed sustainable practices into the WordPress community and its processes. The Sustainability Team focuses on ensuring longevity: socially, economically, and environmentally.', 'wporg' ),
-			'icon'          => '',
+			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0ZM1.11 9.68h2.51c.04.91.167 1.814.38 2.7H1.84a7.864 7.864 0 0 1-.73-2.7Zm8.57-8.49v3.09l2.76-.01a8.568 8.568 0 0 0-.54-1.08 4.128 4.128 0 0 0-2.22-2Zm3.22 4.44c.232.883.37 1.788.41 2.7H9.68v-2.7h3.22ZM8.32 4.28V1.19A4.135 4.135 0 0 0 6.1 3.2a8.568 8.568 0 0 0-.54 1.08h2.76Zm0 1.35v2.7H4.7c.04-.912.178-1.817.41-2.7h3.21ZM1.11 8.32h2.51c.04-.91.167-1.814.38-2.7H1.84a7.864 7.864 0 0 0-.73 2.7ZM4.7 9.68h3.62v2.7H5.11a12.84 12.84 0 0 1-.41-2.7Zm3.63 7.09v-3.09l-2.76.01c.154.372.335.733.54 1.08a4.128 4.128 0 0 0 2.22 2Zm1.35 0v-3.04h2.76a8.568 8.568 0 0 1-.54 1.08 4.128 4.128 0 0 1-2.22 2v-.04Zm0-7.14v2.7h3.21c.232-.883.37-1.788.41-2.7H9.68Zm4.71 0h2.51a7.864 7.864 0 0 1-.73 2.7H14c.21-.87.337-1.757.38-2.65l.01-.05Zm-.39-4c.214.87.344 1.756.39 2.65l2.5.05a7.864 7.864 0 0 0-.73-2.7H14Zm1.35-1.35H13.6a8.922 8.922 0 0 0-1.39-2.52 8.017 8.017 0 0 1 3.14 2.52Zm-10.95 0c.324-.91.793-1.76 1.39-2.52a8.017 8.017 0 0 0-3.14 2.52H4.4Zm-1.76 9.48h.032a7.992 7.992 0 0 0 3.118 2.52 8.922 8.922 0 0 1-1.39-2.52H2.672l-.022-.03-.01.03Zm9.602 2.466-.042.054.01-.04.032-.014Zm0 0a7.992 7.992 0 0 0 3.108-2.466h-1.76a8.922 8.922 0 0 1-1.348 2.466Z" clip-rule="evenodd"/></svg>',
 			'url'           => 'https://make.wordpress.org/performance/handbook/get-involved/',
 		),
 		'test' => array(
 			'name'          => esc_html__( 'Test', 'wporg' ),
 			'description'   => esc_html__( 'The Test Team tests, documents, and reports on the WordPress user experience using every device available. Through continuous dogfooding and visual records, the Test Team understands not only what is wrong, but also what is right, while championing user experience.', 'wporg' ),
-			'icon'          => '',
+			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M17 3c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1H3c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h14Zm-1 6c-1.6-1.86-3.7-3-6-3S5.6 7.14 4 9c1.6 1.86 3.7 3 6 3s4.4-1.14 6-3Zm-4 0c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2Zm5 8h-3v-1H6v1H3v1h14v-1Z" clip-rule="evenodd"/></svg>',
 			'url'           => 'https://make.wordpress.org/test/handbook/',
 		),
 	);
