@@ -176,6 +176,7 @@ function get_pages() {
 						'tv',
 						'marketing',
 						'documentation',
+						'photos',
 					),
 				),
 				array(
@@ -207,6 +208,7 @@ function get_pages() {
 					'teams' => array(
 						'design',
 						'training',
+						'photos',
 					),
 				),
 				array(
@@ -489,7 +491,7 @@ function get_teams() {
 			'name'          => esc_html__( 'Photos', 'wporg' ),
 			'description'   => esc_html__( 'The Photo Directory Team moderates every photo submitted to the WordPress Photo Directory, maintains and improves the directory site itself, and provides resources and documentation to educate, encourage, and facilitate photo contributors.', 'wporg' ),
 			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 5V3H3v2h3Zm12 10V4H9L7 6H2v9h16Zm-4-5c0-1.66-1.34-3-3-3s-3 1.34-3 3 1.34 3 3 3 3-1.34 3-3Z" clip-rule="evenodd"/></svg>',
-			'url'           => 'https://make.wordpress.org/cli/handbook/contributing/',
+			'url'           => 'https://make.wordpress.org/photos/handbook/moderating-photos/',
 		),
 		'core-performance' => array(
 			'name'          => esc_html__( 'Core Performance', 'wporg' ),
