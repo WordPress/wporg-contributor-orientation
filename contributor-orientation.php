@@ -156,6 +156,7 @@ function get_pages() {
 						'cli',
 						'documentation',
 						'test',
+						'core-performance',
 					),
 				),
 				array(
@@ -193,6 +194,7 @@ function get_pages() {
 						'tide',
 						'cli',
 						'test',
+						'core-performance',
 					),
 				),
 				array(
@@ -215,6 +217,7 @@ function get_pages() {
 						'mobile',
 						'test',
 						'support',
+						'core-performance',
 					),
 				),
 				array(
@@ -225,6 +228,7 @@ function get_pages() {
 						'support',
 						'test',
 						'cli',
+						'core-performance',
 					),
 				),
 				array(
@@ -322,6 +326,7 @@ function get_pages() {
 						'core',
 						'mobile',
 						'test',
+						'core-performance',
 					),
 				),
 				array(
@@ -330,6 +335,7 @@ function get_pages() {
 						'core',
 						'mobile',
 						'test',
+						'core-performance',
 					),
 				),
 				array(
