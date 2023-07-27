@@ -488,7 +488,7 @@ function get_teams() {
 		'cli' => array(
 			'name'          => esc_html__( 'CLI', 'wporg' ),
 			'description'   => esc_html__( 'The CLI Team develops, maintains, and documents WP-CLI, the official command line tool for interacting with and managing your WordPress sites.', 'wporg' ),
-			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><rect x="0" fill="none" width="20" height="20"/><g><path d="M17 7.2V3H3v7.1c2.6-.5 4.5-1.5 6.4-2.6.2-.2.4-.3.6-.5v3c-1.9 1.1-4 2.2-7 2.8V17h14V9.9c-2.6.5-4.4 1.5-6.2 2.6-.3.1-.5.3-.8.4V10c2-1.1 4-2.2 7-2.8z"/></g></svg>',
+			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><rect x="0" fill="none" width="20" height="20"/><g><path d="M6 15l5-5-5-5 1-2 7 7-7 7z"/></g></svg>',
 			'url'           => 'https://make.wordpress.org/photos/handbook/',
 		),
 		'photos' => array(
