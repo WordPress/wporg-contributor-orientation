@@ -598,11 +598,14 @@ function get_teams() {
 			'name'        => esc_html__( 'Get started with the Openverse Team', 'wporg' ),
 			'description' => esc_html__( 'The Openverse Team implements new features and new media types; maintains the public API and front-end search engine; and develops WordPress integrations to share Openverse with the entire WordPress community.', 'wporg' ),
 			'icon'        => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><rect x="0" fill="none" width="20" height="20"/><g><path d="M14.9 9c0-.3.1-.6.1-1 0-2.2-1.8-4-4-4-1.6 0-2.9.9-3.6 2.2-.2-.1-.6-.2-.9-.2C5.1 6 4 7.1 4 8.5c0 .2 0 .4.1.5-1.8.3-3.1 1.7-3.1 3.5C1 14.4 2.6 16 4.5 16h10c1.9 0 3.5-1.6 3.5-3.5 0-1.8-1.3-3.3-3.1-3.5z"/></g></svg>',
-			'url'         => 'https://make.wordpress.org/openverse/handbook/new-contributor-guide/'
+			'url'         => 'https://make.wordpress.org/openverse/handbook/new-contributor-guide/',
 		),
-/** 
-* Note: The Plugins, Meta and Tide teams are intentionally not currently displaying as suggested teams because they do not have sufficient new contributor onboarding processes 
-*/			
+
+		/**
+		 * Note: The Plugins, Meta, and Tide teams are intentionally not currently
+		 * displaying as suggested teams because they do not have sufficient new
+		 * contributor onboarding processes.
+		 */
 		'plugins' => array(
 			'name'          => esc_html__( 'Get started with the Plugins Team', 'wporg' ),
 			'description'   => esc_html__( 'If you are a Plugin developer, subscribe to the Plugin review team blog to keep up with the latest updates, find resources, and learn about any issues around Plugin development.', 'wporg' ),
@@ -621,4 +624,5 @@ function get_teams() {
 			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><rect x="0" fill="none" width="20" height="20"/><g><path d="M17 7.2V3H3v7.1c2.6-.5 4.5-1.5 6.4-2.6.2-.2.4-.3.6-.5v3c-1.9 1.1-4 2.2-7 2.8V17h14V9.9c-2.6.5-4.4 1.5-6.2 2.6-.3.1-.5.3-.8.4V10c2-1.1 4-2.2 7-2.8z"/></g></svg>',
 			'url'           => 'https://make.wordpress.org/tide/feedback-support/',
 		),
+	);
 }
