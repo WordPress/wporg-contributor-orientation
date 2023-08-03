@@ -584,7 +584,7 @@ function get_teams() {
 		),
 		'test' => array(
 			'name'          => esc_html__( 'Get started with the Test Team', 'wporg' ),
-			'description'   => esc_html__( 'The Test Team tests, documents, and reports on the WordPress user experience using every device available. Through continuous dogfooding and visual records, the Test Team understands not only what is wrong, but also what is right, while championing user experience.', 'wporg' ),
+			'description'   => esc_html__( 'The Test Team works to improve WordPress quality and usability by advancing the development process through manual and automated testing. Whether through a browser, app, terminal, or code, the team focuses on testing across the entire WordPress ecosystem, including Core and Gutenberg, mobile apps and themes, and feature plugins and importers.', 'wporg' ),
 			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M17 3c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1H3c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h14Zm-1 6c-1.6-1.86-3.7-3-6-3S5.6 7.14 4 9c1.6 1.86 3.7 3 6 3s4.4-1.14 6-3Zm-4 0c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2Zm5 8h-3v-1H6v1H3v1h14v-1Z" clip-rule="evenodd"/></svg>',
 			'url'           => 'https://make.wordpress.org/test/handbook/',
 		),
