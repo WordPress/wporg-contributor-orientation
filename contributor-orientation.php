@@ -113,7 +113,6 @@ function get_pages() {
 					'teams' => array(
 						'accessibility',
 						'design',
-						'marketing',
 						'mobile',
 						'openverse',
 						'photos',
@@ -128,11 +127,9 @@ function get_pages() {
 						'accessibility',
 						'documentation',
 						'hosting',
-						'marketing',
 						'mobile',
 						'polyglots',
 						'support',
-						'sustainability',
 						'themes',
 						'training',
 						'tv',
@@ -147,7 +144,6 @@ function get_pages() {
 						'photos',
 						'polyglots',
 						'support',
-						'sustainability',
 						'tv',
 					),
 				),
@@ -164,12 +160,10 @@ function get_pages() {
 						'accessibility',
 						'documentation',
 						'hosting',
-						'marketing',
 						'mobile',
 						'openverse',
 						'polyglots',
 						'support',
-						'sustainability',
 						'themes',
 						'training',
 						'tv',
@@ -183,7 +177,6 @@ function get_pages() {
 						'core',
 						'design',
 						'documentation',
-						'marketing',
 						'polyglots',
 						'training',
 					),
@@ -193,7 +186,6 @@ function get_pages() {
 					'teams' => array(
 						'accessibility',
 						'documentation',
-						'marketing',
 						'mobile',
 						'photos',
 						'polyglots',
@@ -207,9 +199,7 @@ function get_pages() {
 					'teams' => array(
 						'community',
 						'hosting',
-						'marketing',
 						'mobile',
-						'sustainability',
 					),
 				),
 				array(
@@ -232,7 +222,6 @@ function get_pages() {
 						'accessibility',
 						'community',
 						'support',
-						'sustainability',
 						'training',
 					),
 				),
@@ -240,7 +229,6 @@ function get_pages() {
 					'label' => esc_html__( 'Creating graphics, designing patterns or layouts, editing videos', 'wporg' ),
 					'teams' => array(
 						'design',
-						'marketing',
 						'mobile',
 						'photos',
 						'training',
@@ -255,7 +243,6 @@ function get_pages() {
 						'core-performance',
 						'design',
 						'documentation',
-						'marketing',
 						'mobile',
 						'polyglots',
 						'support',
@@ -282,9 +269,7 @@ function get_pages() {
 					'label' => esc_html__( 'Organizing events, working with people', 'wporg' ),
 					'teams' => array(
 						'community',
-						'marketing',
 						'support',
-						'sustainability',
 					),
 				),
 				array(
@@ -304,7 +289,6 @@ function get_pages() {
 						'documentation',
 						'community',
 						'test',
-						'sustainability',
 					),
 				),
 			),
@@ -345,7 +329,6 @@ function get_pages() {
 					'label' => esc_html__( 'Event and group organization', 'wporg' ),
 					'teams' => array(
 						'community',
-						'sustainability',
 						'tv',
 					),
 				),
@@ -366,7 +349,6 @@ function get_pages() {
 						'mobile',
 						'polyglots',
 						'support',
-						'sustainability',
 						'training',
 						'tv',
 					),
@@ -376,15 +358,12 @@ function get_pages() {
 					'teams' => array(
 						'community',
 						'documentation',
-						'marketing',
 						'mobile',
-						'sustainability',
 					),
 				),
 				array(
 					'label' => esc_html__( 'Photography, video production and editing', 'wporg' ),
 					'teams' => array(
-						'marketing',
 						'photos',
 						'training',
 						'tv',
@@ -417,7 +396,6 @@ function get_pages() {
 					'teams' => array(
 						'accessibility',
 						'documentation',
-						'marketing',
 						'mobile',
 						'polyglots',
 
@@ -427,7 +405,6 @@ function get_pages() {
 					'label' => esc_html__( 'Web design, UX/UI design, graphic design', 'wporg' ),
 					'teams' => array(
 						'design',
-						'marketing',
 						'mobile',
 						'openverse',
 						'photos',
@@ -512,12 +489,6 @@ function get_teams() {
 			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><rect x="0" fill="none" width="20" height="20"/><g><path d="M10 10L2.54 7.02 3 18H1l.48-11.41L0 6l10-4 10 4zm0-5c-.55 0-1 .22-1 .5s.45.5 1 .5 1-.22 1-.5-.45-.5-1-.5zm0 6l5.57-2.23c.71.94 1.2 2.07 1.36 3.3-.3-.04-.61-.07-.93-.07-2.55 0-4.78 1.37-6 3.41C8.78 13.37 6.55 12 4 12c-.32 0-.63.03-.93.07.16-1.23.65-2.36 1.36-3.3z"/></g></svg>',
 			'url'           => 'https://make.wordpress.org/training/handbook/getting-started/',
 		),
-		'marketing' => array(
-			'name'          => esc_html__( 'Get started with the Marketing Team', 'wporg' ),
-			'description'   => esc_html__( 'The Marketing Team promotes WordPress to current and future users and contributors. We create and amplify campaigns to support the growth of the WordPress project and the WordPress community.', 'wporg' ),
-			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><rect x="0" fill="none" width="20" height="20"/><g><path d="M10 1c7 0 9 2.91 9 6.5S17 14 10 14s-9-2.91-9-6.5S3 1 10 1zM5.5 9C6.33 9 7 8.33 7 7.5S6.33 6 5.5 6 4 6.67 4 7.5 4.67 9 5.5 9zM10 9c.83 0 1.5-.67 1.5-1.5S10.83 6 10 6s-1.5.67-1.5 1.5S9.17 9 10 9zm4.5 0c.83 0 1.5-.67 1.5-1.5S15.33 6 14.5 6 13 6.67 13 7.5 13.67 9 14.5 9zM6 14.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zm-3 2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/></g></svg>',
-			'url'           => 'https://make.wordpress.org/marketing/handbook/getting-involved/',
-		),
 		'tv' => array(
 			'name'          => esc_html__( 'Get started with the TV Team', 'wporg' ),
 			'description'   => esc_html__( 'The TV Team reviews and approves every video submitted to WordPress.tv. They also help WordCamps around the world with video post-production and are responsible for the captioning and subtitling of published videos. Reviewing videos is a great way to learn about WordPress and help the community: Experience is not required to get involved.', 'wporg' ),
@@ -577,12 +548,6 @@ function get_teams() {
 			'description'   => esc_html__( 'The Core Performance Team is dedicated to monitoring, enhancing, and promoting performance in WordPress core and its surrounding ecosystem.', 'wporg' ),
 			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 94"><path d="M39.21 20.85H27.52a2.5 2.5 0 0 0-2.5 2.5v11.69a2.5 2.5 0 0 0 2.5 2.5h11.69a2.5 2.5 0 0 0 2.5-2.5V23.35a2.5 2.5 0 0 0-2.5-2.5zM41.71 58.96v11.69c0 .66-.26 1.3-.73 1.77s-1.11.73-1.77.73H27.52c-.66 0-1.3-.26-1.77-.73s-.73-1.11-.73-1.77V49.28c0-.4.1-.79.28-1.14.03-.06.07-.12.1-.18.21-.33.49-.61.83-.82L37.9 40.1a2.49 2.49 0 0 1 2.87.19c.26.21.47.46.63.75.16.29.26.61.29.94.02.11.02.22.02.34v16.64ZM68.98 30.23v16.84c0 .33-.06.65-.19.96-.13.3-.31.58-.54.81l-6.88 6.88c-.23.23-.51.42-.81.54-.3.13-.63.19-.96.19H46.45c-.66 0-1.3-.26-1.77-.73s-.73-1.11-.73-1.77V42.26c0-.66.26-1.3.73-1.77s1.11-.73 1.77-.73h13.08s1.11 0 1.11-1.11-1.11-1.11-1.11-1.11H46.45c-.66 0-1.3-.26-1.77-.73s-.73-1.11-.73-1.77V23.35c0-.66.26-1.3.73-1.77s1.11-.73 1.77-.73H59.6c.33 0 .65.06.96.19.3.13.58.31.81.54l6.88 6.88c.23.23.42.51.54.81.13.3.19.63.19.96Z"/></svg>',
 			'url'           => 'https://make.wordpress.org/performance/handbook/get-involved/',
-		),
-		'sustainability' => array(
-			'name'          => esc_html__( 'Get started with the Sustainability Team', 'wporg' ),
-			'description'   => esc_html__( 'The Sustainability Team aims to embed sustainable practices into the WordPress community and its processes. The Sustainability Team focuses on ensuring longevity: socially, economically, and environmentally.', 'wporg' ),
-			'icon'          => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0ZM1.11 9.68h2.51c.04.91.167 1.814.38 2.7H1.84a7.864 7.864 0 0 1-.73-2.7Zm8.57-8.49v3.09l2.76-.01a8.568 8.568 0 0 0-.54-1.08 4.128 4.128 0 0 0-2.22-2Zm3.22 4.44c.232.883.37 1.788.41 2.7H9.68v-2.7h3.22ZM8.32 4.28V1.19A4.135 4.135 0 0 0 6.1 3.2a8.568 8.568 0 0 0-.54 1.08h2.76Zm0 1.35v2.7H4.7c.04-.912.178-1.817.41-2.7h3.21ZM1.11 8.32h2.51c.04-.91.167-1.814.38-2.7H1.84a7.864 7.864 0 0 0-.73 2.7ZM4.7 9.68h3.62v2.7H5.11a12.84 12.84 0 0 1-.41-2.7Zm3.63 7.09v-3.09l-2.76.01c.154.372.335.733.54 1.08a4.128 4.128 0 0 0 2.22 2Zm1.35 0v-3.04h2.76a8.568 8.568 0 0 1-.54 1.08 4.128 4.128 0 0 1-2.22 2v-.04Zm0-7.14v2.7h3.21c.232-.883.37-1.788.41-2.7H9.68Zm4.71 0h2.51a7.864 7.864 0 0 1-.73 2.7H14c.21-.87.337-1.757.38-2.65l.01-.05Zm-.39-4c.214.87.344 1.756.39 2.65l2.5.05a7.864 7.864 0 0 0-.73-2.7H14Zm1.35-1.35H13.6a8.922 8.922 0 0 0-1.39-2.52 8.017 8.017 0 0 1 3.14 2.52Zm-10.95 0c.324-.91.793-1.76 1.39-2.52a8.017 8.017 0 0 0-3.14 2.52H4.4Zm-1.76 9.48h.032a7.992 7.992 0 0 0 3.118 2.52 8.922 8.922 0 0 1-1.39-2.52H2.672l-.022-.03-.01.03Zm9.602 2.466-.042.054.01-.04.032-.014Zm0 0a7.992 7.992 0 0 0 3.108-2.466h-1.76a8.922 8.922 0 0 1-1.348 2.466Z" clip-rule="evenodd"/></svg>',
-			'url'           => 'https://make.wordpress.org/sustainability/2023/06/08/welcome/',
 		),
 		'test' => array(
 			'name'          => esc_html__( 'Get started with the Test Team', 'wporg' ),
