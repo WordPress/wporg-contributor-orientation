@@ -2,64 +2,45 @@
  * WordPress dependencies
  */
 import { __, sprintf } from '@wordpress/i18n';
-import { useEffect, useRef, useState } from '@wordpress/element';
+import { useRef, useState } from '@wordpress/element';
 
 /**
  * Internal dependencies
  */
-import DoneStep from './done-step';
 import QuestionStep from './question-step';
+import Results from './results';
+import { rankTeams } from '../utils/score';
 
 const allPages = WPorgContribBlock.pages;
-const allTeams = Object.keys( WPorgContribBlock.teams );
-const steps = WPorgContribBlock.pages.reduce( ( acc, current ) => {
-	acc.push( current.stepTitle );
-	return acc;
-}, [] );
+const steps = allPages.map( ( page ) => page.stepTitle );
+
+// The best match plus four more teams.
+const RESULT_COUNT = 5;
 
 /**
- * Find the intersection of multiple arrays.
+ * Collect the tags of every chosen answer.
  *
- * @param {Array[]} data A 2D array, list of arrays to match.
- * @return {Array} A single array of the values shared across the input.
+ * @param {Object} answers Chosen answer indexes, keyed by page index.
+ * @return {string[]} Tags, repeated once for each chosen answer that carries them.
  */
-function intersect( data = [] ) {
-	return data.reduce( ( a, b ) => a.filter( ( item ) => b.includes( item ) ), allTeams );
+function getSelectedTags( answers ) {
+	return allPages.flatMap( ( page, index ) =>
+		( answers[ index ] || [] ).flatMap( ( answer ) => page.questions[ answer ].tags )
+	);
 }
 
 export default function Frame() {
 	const [ i, setPage ] = useState( 0 );
-	const [ selected, setSelected ] = useState( [] );
-	const [ teams, setTeams ] = useState( allTeams );
+	// Chosen answer indexes, keyed by page index, e.g. `{ 0: [ 1, 4 ], 2: [ 0 ] }`.
+	const [ answers, setAnswers ] = useState( {} );
 	const pageRef = useRef( null );
-	const onPrevious = () => {
+	const goTo = ( index ) => {
 		if ( pageRef.current ) {
 			pageRef.current.tabIndex = -1;
 			pageRef.current.focus();
 		}
-		setPage( i - 1 );
+		setPage( index );
 	};
-	const onNext = () => {
-		if ( pageRef.current ) {
-			pageRef.current.tabIndex = -1;
-			pageRef.current.focus();
-		}
-		setPage( i + 1 );
-	};
-
-	// When the selected value is updated, use that step-by-step to get a list of teams.
-	useEffect( () => {
-		const teamList = [];
-		// Update the team list up to the current step.
-		for ( let index = 0; index <= i; index++ ) {
-			const list = selected.filter( ( result ) => result.startsWith( `q${ index }` ) );
-			if ( list.length ) {
-				const _teams = [ ...new Set( list.join( ',' ).replace( /q\d:/g, '' ).split( ',' ) ) ];
-				teamList.push( _teams );
-			}
-		}
-		setTeams( intersect( teamList ) );
-	}, [ selected, i ] );
 
 	const page = i < allPages.length ? allPages[ i ] : false;
 	if ( ! page ) {
@@ -87,17 +68,28 @@ export default function Frame() {
 			<div className="wporg-contributor-orientation--page" ref={ pageRef }>
 				{ ! isLastPage ? (
 					<QuestionStep
+						key={ i }
 						{ ...page }
-						teamList={ teams }
-						value={ selected }
+						value={ answers[ i ] || [] }
 						onChange={ ( value ) => {
-							setSelected( value );
+							setAnswers( { ...answers, [ i ]: value } );
 						} }
-						onPrevious={ onPrevious }
-						onNext={ onNext }
+						onPrevious={ () => goTo( i - 1 ) }
+						onNext={ () => goTo( i + 1 ) }
 					/>
 				) : (
-					<DoneStep { ...page } value={ teams } onPrevious={ onPrevious } />
+					<Results
+						{ ...page }
+						teams={ rankTeams( getSelectedTags( answers ), WPorgContribBlock.teams ).slice(
+							0,
+							RESULT_COUNT
+						) }
+						onPrevious={ () => goTo( i - 1 ) }
+						onRestart={ () => {
+							setAnswers( {} );
+							goTo( 0 );
+						} }
+					/>
 				) }
 			</div>
 		</div>

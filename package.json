@@ -20,7 +20,8 @@
 		"format:php": "composer run format",
 		"lint:css": "wp-scripts lint-style src/*.scss",
 		"lint:js": "wp-scripts lint-js src",
-		"lint:php": "composer run lint"
+		"lint:php": "composer run lint",
+		"test:unit": "wp-scripts test-unit-js"
 	},
 	"browserslist": [
 		"extends @wordpress/browserslist-config"

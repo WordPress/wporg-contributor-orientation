@@ -3,6 +3,8 @@
 	--wporg-contrib--border--color: var(--wp--preset--color--secondary);
 	--wporg-contrib--border--style: solid;
 	--wporg-contrib--border--width: 1px;
+	// Layouts follow the block's own width, which depends on the theme's column.
+	container-type: inline-size;
 
 	* {
 		box-sizing: border-box;
@@ -36,7 +38,8 @@
 		}
 	}
 
-	@media (max-width: 780px) {
+	// Six steps need about 680px in one row.
+	@container (max-width: 720px) {
 		flex-direction: column;
 
 		li strong {
@@ -76,6 +79,21 @@
 		display: inline-flex;
 		align-items: center;
 		margin-block-end: 0;
+	}
+
+	// Single-choice questions: match the checkbox rows' size and spacing.
+	.components-radio-control {
+		margin-block-start: var(--wporg-contrib--spacing--block-gap);
+		font-size: inherit;
+	}
+
+	.components-radio-control__group-wrapper {
+		gap: var(--wporg-contrib--spacing--block-gap);
+	}
+
+	.components-radio-control__label {
+		font-size: inherit;
+		line-height: inherit;
 	}
 
 	.components-notice {
@@ -119,5 +137,56 @@
 	img {
 		width: 1em;
 		height: 1em;
+	}
+}
+
+.wporg-contributor-orientation--hint {
+	margin-block: calc(var(--wporg-contrib--spacing--block-gap) / 2) 0;
+}
+
+.wporg-contributor-orientation--page .is-disabled {
+	opacity: 0.6;
+}
+
+.wporg-contributor-orientation--team-desc {
+	margin-block: calc(var(--wporg-contrib--spacing--block-gap) / 2) 0;
+}
+
+.wporg-contributor-orientation--team.is-top {
+	padding: var(--wporg-contrib--spacing--block-gap);
+	border-color: var(--wporg-contrib--border--color);
+	border-style: var(--wporg-contrib--border--style);
+	border-width: var(--wporg-contrib--border--width);
+
+	.wporg-contributor-orientation--team-name {
+		font-size: 1.4em;
+	}
+}
+
+.wporg-contributor-orientation--label {
+	margin-block: 0 calc(var(--wporg-contrib--spacing--block-gap) / 2);
+	font-weight: 600;
+}
+
+.wporg-contributor-orientation--subtitle {
+	margin-block: calc(var(--wporg-contrib--spacing--block-gap) * 2) 0;
+	font-size: 1.2em;
+}
+
+.wporg-contributor-orientation--others {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--wporg-contrib--spacing--block-gap);
+
+	.wporg-contributor-orientation--team {
+		margin-block-start: var(--wporg-contrib--spacing--block-gap);
+	}
+
+	.wporg-contributor-orientation--team-name {
+		font-size: 1.1em;
+	}
+
+	@container (max-width: 560px) {
+		grid-template-columns: 1fr;
 	}
 }

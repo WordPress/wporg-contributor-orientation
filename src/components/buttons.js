@@ -6,7 +6,7 @@ import { Button } from '@wordpress/components';
 
 const allPages = WPorgContribBlock.pages;
 
-export default function Buttons( { step, onNext, onPrevious } ) {
+export default function Buttons( { step, onNext, onPrevious, onRestart } ) {
 	const total = allPages.length;
 	if ( step < 0 ) {
 		step = allPages.length;
@@ -21,6 +21,11 @@ export default function Buttons( { step, onNext, onPrevious } ) {
 			{ step < total && (
 				<Button onClick={ onNext } variant="primary">
 					{ __( 'Next', 'wporg' ) }
+				</Button>
+			) }
+			{ !! onRestart && (
+				<Button onClick={ onRestart } variant="tertiary">
+					{ __( 'Start over', 'wporg' ) }
 				</Button>
 			) }
 		</div>
