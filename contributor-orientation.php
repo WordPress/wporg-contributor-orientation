@@ -565,7 +565,7 @@ function get_teams() {
 			'name'        => esc_html__( 'Get started with the Openverse Team', 'wporg' ),
 			'description' => esc_html__( 'The Openverse Team implements new features and new media types; maintains the public API and front-end search engine; and develops WordPress integrations to share Openverse with the entire WordPress community.', 'wporg' ),
 			'icon'        => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 42"><g xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path class="circle" d="M37.559 18.795c5.156 0 9.335-4.207 9.335-9.398 0-5.19-4.18-9.397-9.335-9.397-5.156 0-9.335 4.207-9.335 9.398 0 5.19 4.18 9.397 9.335 9.397zM1 9.398c0 5.17 4.172 9.397 9.335 9.397V0C5.172 0 1 4.2 1 9.398zM14.612 9.398c0 5.17 4.172 9.397 9.335 9.397V0c-5.137 0-9.335 4.2-9.335 9.398zM37.559 41.921c5.156 0 9.335-4.207 9.335-9.397s-4.18-9.398-9.335-9.398c-5.156 0-9.335 4.208-9.335 9.398 0 5.19 4.18 9.397 9.335 9.397zM14.612 32.524c0 5.171 4.172 9.397 9.335 9.397V23.153c-5.137 0-9.335 4.2-9.335 9.37zM1 32.602C1 37.8 5.172 42 10.335 42V23.231c-5.163 0-9.335 4.2-9.335 9.371z"/></g></svg>',
-			'url'         => 'https://make.wordpress.org/openverse/handbook/new-contributor-guide/',
+			'url'         => 'https://make.wordpress.org/openverse/handbook/',
 		),
 
 		/**
